@@ -1,0 +1,21 @@
+name: test
+
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first job
+        run: echo "hello word"
+
+  job2:
+    needs: job1 
+    runs-on: ubuntu-latest
+    steps:
+      - name: second job
+        run: echo "sdjjlasdcn"
